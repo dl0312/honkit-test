@@ -1,14 +1,13 @@
 #!/bin/bash
 
 . $HOME/.bashrc
-  
-# out of heap 에러 방지 https://github.com/gatsbyjs/gatsby/issues/15190#issuecomment-509906381
-export NODE_OPTIONS="--max_old_space_size=4096" 
 
 git config --global user.name 'Geon Lee' 
 git config --global user.email 'leegun2003@gmail.com'
 
 git fetch
+
+git status
 
 git checkout gh-pages
 
@@ -35,4 +34,4 @@ git add .
 git commit -a -m "publish honkit"
 
 # gh-pages 브랜치에 PUSH!
-git push origin gh-pages
+git push
