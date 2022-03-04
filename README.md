@@ -1,3 +1,7 @@
-# honkit tutorial
+# honkit-gh-pages
 
-update2
+## 사용한 기술
+
+* [honkit](https://honkit.netlify.app/)
+* gh-pages
+* github-actions

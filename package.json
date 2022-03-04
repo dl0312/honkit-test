@@ -1,5 +1,5 @@
 {
-  "name": "git-book-test",
+  "name": "honkit-gh-pages",
   "description": "git book 라이브러리 테스트",
   "dependencies": {
     "gh-pages": "^3.2.3",
@@ -9,5 +9,6 @@
     "start": "honkit serve",
     "publish": "./publish_gitbook.sh"
   },
-  "author": "geon-lee"
+  "author": "geon-lee",
+  "license": "ISC"
 }
