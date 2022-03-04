@@ -14,7 +14,7 @@ git checkout gh-pages
 git clean -d -f -f
 
 # 최신 gh-pages 브랜치 정보를 가져와 rebase를 진행한다.
-git pull origin gh-pages --rebase
+git pull origin gh-pages --rebase -f
 git status
 
 # run honkit build
