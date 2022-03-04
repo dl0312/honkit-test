@@ -1,16 +1,15 @@
 git config --global user.name 'Geon Lee' 
 git config --global user.email 'leegun2003@gmail.com'
 
-# run honkit build
-npx honkit build
 
 git checkout gh-pages
 
 git clean -d -f -f
 
-# rebase with latest gh-pages branch info
-git pull origin gh-pages --rebase
 git status
+
+# run honkit build
+npx honkit build
 
 # copy honkit build _book folder to root directory
 cp -R _book/* .
