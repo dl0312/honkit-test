@@ -8,6 +8,8 @@ export NODE_OPTIONS="--max_old_space_size=4096"
 git config --global user.name 'Geon Lee' 
 git config --global user.email 'leegun2003@gmail.com'
 
+git fetch
+
 git checkout gh-pages
 
 git clean -d -f -f
@@ -33,4 +35,4 @@ git add .
 git commit -a -m "publish honkit"
 
 # gh-pages 브랜치에 PUSH!
-git push
+git push origin gh-pages
