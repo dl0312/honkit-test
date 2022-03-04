@@ -38,4 +38,4 @@ jobs:
           yarn
       - name: publish
         run: |
-          "./.github/publish.sh"
+          "${{ env:GITHUB_WORKSPACE }}/.github/publish.sh"
