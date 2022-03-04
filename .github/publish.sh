@@ -1,8 +1,6 @@
 git config --global user.name 'Geon Lee' 
 git config --global user.email 'leegun2003@gmail.com'
 
-git fetch
-
 git status
 
 git checkout gh-pages
