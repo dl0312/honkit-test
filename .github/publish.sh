@@ -17,13 +17,13 @@ git clean -d -f -f
 git pull origin gh-pages --rebase
 git status
 
-# gitbook 의존 파일을 설치하고 gitbook 빌드를 돌린다.
+# run honkit build
 npx honkit build
 
-# gitbook build로 생긴 _book폴더 아래 모든 정보를 현재 위치로 가져온다.
+# copy honkit build _book folder to root directory
 cp -R _book/* .
 
-# node_modules폴더와 _book폴더를 지워준다.
+# clean node_modules, _book foleders
 git clean -fx node_modules
 git clean -fx _book
 
@@ -34,4 +34,4 @@ git add .
 git commit -a -m "publish honkit"
 
 # gh-pages 브랜치에 PUSH!
-git push
+git push origin gh-pages
