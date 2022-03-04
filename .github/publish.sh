@@ -8,8 +8,8 @@ export NODE_OPTIONS="--max_old_space_size=4096"
 # gitbook 의존 파일을 설치하고 gitbook 빌드를 돌린다.
 npx honkit build
 
-git config --global user.name 'Github Action' 
-git config --global user.email 'joel0312@gmail.com'
+git config --global user.name 'Geon Lee' 
+git config --global user.email 'leegun2003@gmail.com'
 
 git checkout gh-pages
 
