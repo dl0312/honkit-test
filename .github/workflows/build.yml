@@ -38,5 +38,4 @@ jobs:
           yarn
       - name: publish
         run: |
-          chmod +x "${GITHUB_WORKSPACE}/.github/publish.sh"
-          "${GITHUB_WORKSPACE}/.github/publish.sh"
+          "./.github/publish.sh"
