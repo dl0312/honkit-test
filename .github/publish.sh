@@ -1,7 +1,3 @@
-#!/bin/bash
-
-. $HOME/.bashrc
-
 git config --global user.name 'Geon Lee' 
 git config --global user.email 'leegun2003@gmail.com'
 

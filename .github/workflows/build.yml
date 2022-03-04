@@ -27,6 +27,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/setup-node@v1
         with:
@@ -38,5 +40,32 @@ jobs:
           yarn
       - name: publish
         run: |
-          chmod +x "$GITHUB_WORKSPACE/.github/publish.sh"
-          "$GITHUB_WORKSPACE/.github/publish.sh"
+          git fetch
+
+          git status
+
+          git checkout gh-pages
+
+          git clean -d -f -f
+
+          # 최신 gh-pages 브랜치 정보를 가져와 rebase를 진행한다.
+          git pull origin gh-pages --rebase
+          git status
+
+          # run honkit build
+          npx honkit build
+
+          # copy honkit build _book folder to root directory
+          cp -R _book/* .
+
+          # clean node_modules, _book foleders
+          git clean -fx node_modules
+          git clean -fx _book
+
+          git add .
+
+          # commit
+          git commit -a -m "publish honkit"
+
+          # push to gh-pages branch
+          git push -f origin gh-pages
