@@ -5,9 +5,6 @@
 # out of heap 에러 방지 https://github.com/gatsbyjs/gatsby/issues/15190#issuecomment-509906381
 export NODE_OPTIONS="--max_old_space_size=4096" 
 
-# gitbook 의존 파일을 설치하고 gitbook 빌드를 돌린다.
-npx honkit build
-
 git config --global user.name 'Geon Lee' 
 git config --global user.email 'leegun2003@gmail.com'
 
@@ -18,6 +15,9 @@ git clean -d -f -f
 # 최신 gh-pages 브랜치 정보를 가져와 rebase를 진행한다.
 git pull origin gh-pages --rebase
 git status
+
+# gitbook 의존 파일을 설치하고 gitbook 빌드를 돌린다.
+npx honkit build
 
 # gitbook build로 생긴 _book폴더 아래 모든 정보를 현재 위치로 가져온다.
 cp -R _book/* .
@@ -33,4 +33,4 @@ git add .
 git commit -a -m "publish honkit"
 
 # gh-pages 브랜치에 PUSH!
-git push -f origin gh-pages
+git push
