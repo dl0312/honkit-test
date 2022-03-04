@@ -14,7 +14,7 @@ git checkout gh-pages
 git clean -d -f -f
 
 # 최신 gh-pages 브랜치 정보를 가져와 rebase를 진행한다.
-git pull origin gh-pages --rebase -f
+git pull origin gh-pages --rebase
 git status
 
 # run honkit build
@@ -27,11 +27,10 @@ cp -R _book/* .
 git clean -fx node_modules
 git clean -fx _book
 
-# NOQA
 git add .
 
-# 커밋커밋!
+# commit
 git commit -a -m "publish honkit"
 
-# gh-pages 브랜치에 PUSH!
-git push origin gh-pages
+# push to gh-pages branch
+git push -f origin gh-pages
