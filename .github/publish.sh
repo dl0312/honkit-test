@@ -1,18 +1,16 @@
 git config --global user.name 'Geon Lee' 
 git config --global user.email 'leegun2003@gmail.com'
 
-git status
+# run honkit build
+npx honkit build
 
 git checkout gh-pages
 
 git clean -d -f -f
 
-# 최신 gh-pages 브랜치 정보를 가져와 rebase를 진행한다.
+# rebase with latest gh-pages branch info
 git pull origin gh-pages --rebase
 git status
-
-# run honkit build
-npx honkit build
 
 # copy honkit build _book folder to root directory
 cp -R _book/* .
