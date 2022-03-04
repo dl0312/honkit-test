@@ -33,4 +33,4 @@ git add .
 git commit -a -m "publish honkit"
 
 # gh-pages 브랜치에 PUSH!
-git push origin gh-pages
+git push
