@@ -43,7 +43,7 @@ jobs:
           git config --global user.name 'Geon Lee' 
           git config --global user.email 'leegun2003@gmail.com'
 
-          git fetch
+          git checkout gh-pages
 
           git clean -d -f -f
 
