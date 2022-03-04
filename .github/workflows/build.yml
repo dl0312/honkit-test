@@ -45,11 +45,17 @@ jobs:
 
           git fetch
 
+          git clean -d -f -f
+
           # run honkit build
           npx honkit build
 
           # copy honkit build _book folder to root directory
           cp -R _book/* .
+
+          # clean node_modules, _book foleders
+          git clean -fx node_modules
+          git clean -fx _book
 
           git add .
 
